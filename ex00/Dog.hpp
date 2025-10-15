@@ -1,48 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/11 16:10:45 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/15 19:08:39 by mdahani          ###   ########.fr       */
+/*   Created: 2025/10/15 19:06:37 by mdahani           #+#    #+#             */
+/*   Updated: 2025/10/15 19:08:36 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef DOG_HPP
+# define DOG_HPP
 
 // * Includes
 #include <iostream>
 
 // * Class With Orthodox Canonical Form
-class Animal {
-    // ! protected
-    protected:
-        std::string type;
-
+class Dog {
     // ! public
     public:
         // * Default constructor
-        Animal();
+        Dog();
 
         // * Parametrised constructor
-        Animal(const std::string name);
+        Dog(const std::string name);
 
         // * Copy constructor
-        Animal(const Animal &other);
+        Dog(const Dog &other);
 
         // * Copy assignment operator
-        Animal &operator=(const Animal &other);
+        Dog &operator=(const Dog &other);
 
         // * Destructor
-        ~Animal();
+        ~Dog();
 
         // * Setters & Getters
 
         // * Methods
-        void makeSound();
 };
 
 #endif
