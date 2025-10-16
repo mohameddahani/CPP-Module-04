@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 19:06:26 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/16 13:53:27 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/16 16:03:06 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,6 @@ class Cat: public Animal {
     public:
         // * Default constructor
         Cat();
-
-        // * Parametrised constructor
-        Cat(const std::string name);
 
         // * Copy constructor
         Cat(const Cat &other);

@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 19:06:49 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/16 15:04:00 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/16 16:03:22 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,6 @@ Dog::Dog(){
     this->type = "Dog";
     std::cout << "Default constructor of Dog is called" << std::endl;
 }
-
-// // * Parametrised constructor with initializer list
-// Dog::Dog(std::string name){
-//     this->type = "Dog";
-//     std::cout << "Dog " << getType() << " is created" << std::endl;
-// }
 
 // * Copy constructor with initializer list
 Dog::Dog(const Dog &other): Animal(other){
@@ -46,9 +40,6 @@ Dog::~Dog(){
 }
 
 // * Setters & Getters
-// std::string Dog::getType() const{
-//     return this->type;
-// }
 
 // * Methods
 void Dog::makeSound() const {

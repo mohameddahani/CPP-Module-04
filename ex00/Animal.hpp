@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 16:10:45 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/16 16:00:39 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/16 16:02:22 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,6 @@ class Animal {
     public:
         // * Default constructor
         Animal();
-
-        // // * Parametrised constructor
-        // Animal(const std::string name);
 
         // * Copy constructor
         Animal(const Animal &other);

@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 19:06:21 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/16 15:03:38 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/16 16:02:53 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,6 @@ Cat::Cat(){
 
     std::cout << "Default constructor of Cat is called" << std::endl;
 }
-
-// // * Parametrised constructor with initializer list
-// Cat::Cat(std::string name){
-//     this->type = "Cat";
-//     std::cout << "Cat " << getType() << " is created" << std::endl;
-// }
 
 // * Copy constructor with initializer list
 Cat::Cat(const Cat &other): Animal(other){
@@ -47,9 +41,6 @@ Cat::~Cat(){
 }
 
 // * Setters & Getters
-// std::string Cat::getType() const{
-//     return this->type;
-// }
 
 // * Methods
 void Cat::makeSound() const {
