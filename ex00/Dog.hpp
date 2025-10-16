@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 19:06:37 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/15 19:08:36 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/16 11:52:37 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,17 @@
 
 // * Includes
 #include <iostream>
+#include "Animal.hpp"
 
 // * Class With Orthodox Canonical Form
-class Dog {
+class Dog: public Animal{
     // ! public
     public:
         // * Default constructor
         Dog();
 
-        // * Parametrised constructor
-        Dog(const std::string name);
+        // // * Parametrised constructor
+        // Dog(const std::string name);
 
         // * Copy constructor
         Dog(const Dog &other);
@@ -38,6 +39,7 @@ class Dog {
         // * Setters & Getters
 
         // * Methods
+        void makeSound() const;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 16:10:45 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/15 19:08:39 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/16 16:00:39 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ class Animal {
         // * Default constructor
         Animal();
 
-        // * Parametrised constructor
-        Animal(const std::string name);
+        // // * Parametrised constructor
+        // Animal(const std::string name);
 
         // * Copy constructor
         Animal(const Animal &other);
@@ -37,12 +37,13 @@ class Animal {
         Animal &operator=(const Animal &other);
 
         // * Destructor
-        ~Animal();
+        virtual ~Animal();
 
         // * Setters & Getters
+        std::string getType() const;
 
         // * Methods
-        void makeSound();
+        virtual void makeSound() const;
 };
 
 #endif

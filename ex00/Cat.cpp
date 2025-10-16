@@ -6,38 +6,52 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 19:06:21 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/15 19:08:31 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/16 15:03:38 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#include "Cat.hpp"
 
-// * Includes
-#include <iostream>
+// ! Definitions of Orthodox Canonical Form, Member functions, and Setters, Getters
 
-// * Class With Orthodox Canonical Form
-class Cat {
-    // ! public
-    public:
-        // * Default constructor
-        Cat();
+// * Default constructor
+Cat::Cat(){
+    this->type = "Cat";
 
-        // * Parametrised constructor
-        Cat(const std::string name);
+    std::cout << "Default constructor of Cat is called" << std::endl;
+}
 
-        // * Copy constructor
-        Cat(const Cat &other);
+// // * Parametrised constructor with initializer list
+// Cat::Cat(std::string name){
+//     this->type = "Cat";
+//     std::cout << "Cat " << getType() << " is created" << std::endl;
+// }
 
-        // * Copy assignment operator
-        Cat &operator=(const Cat &other);
+// * Copy constructor with initializer list
+Cat::Cat(const Cat &other): Animal(other){
+    std::cout << "Copy constructor called" << std::endl;
+}
 
-        // * Destructor
-        ~Cat();
+// * Copy assignment operator
+Cat &Cat::operator=(const Cat &other){
+    type = other.type;
 
-        // * Setters & Getters
+    std::cout << "Copy assignment operator called" << std::endl;
+    
+    return *this;
+}
 
-        // * Methods
-};
+// * Destructor
+Cat::~Cat(){
+    std::cout << "Cat" << " is destroyed" << std::endl;
+}
 
-#endif
+// * Setters & Getters
+// std::string Cat::getType() const{
+//     return this->type;
+// }
+
+// * Methods
+void Cat::makeSound() const {
+    std::cout << "Meow 🐱" << std::endl;
+}

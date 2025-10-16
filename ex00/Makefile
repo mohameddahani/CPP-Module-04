@@ -1,6 +1,6 @@
 NAME = Animal
 
-SRCS = main.cpp Cat.cpp Dog.cpp
+SRCS =  main.cpp Animal.cpp Cat.cpp Dog.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

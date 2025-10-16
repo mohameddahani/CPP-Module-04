@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 16:10:08 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/15 19:12:09 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/16 15:09:02 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,10 @@ int main(){
     i->makeSound(); //will output the cat sound!
     j->makeSound();
     meta->makeSound();
-    // ...
+
+    delete meta;
+    delete j;
+    delete i;
+
     return 0;
 }
