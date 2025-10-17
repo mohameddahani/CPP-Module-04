@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 19:06:21 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/17 11:07:54 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/17 20:46:38 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Cat::Cat(): mind(new Brain()){
 }
 
 // * Copy constructor with initializer list
-Cat::Cat(const Cat &other): Animal(other), mind(other.mind){
+Cat::Cat(const Cat &other): Animal(other), mind(new Brain(*other.mind)){
     std::cout << "Copy constructor of Cat is called" << std::endl;
 }
 
