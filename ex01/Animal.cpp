@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 16:11:02 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/17 09:48:36 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/17 21:46:41 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,5 @@ std::string Animal::getType() const{
 
 // * Methods
 void Animal::makeSound() const {
-    std::cout << "Generic animal sound" << std::endl;
+    std::cout << "Generic animal sound 🃏" << std::endl;
 }
