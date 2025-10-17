@@ -1,47 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/15 19:06:49 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/17 09:49:41 by mdahani          ###   ########.fr       */
+/*   Created: 2025/10/15 19:06:21 by mdahani           #+#    #+#             */
+/*   Updated: 2025/10/17 11:07:54 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "Cat.hpp"
 
 // ! Definitions of Orthodox Canonical Form, Member functions, and Setters, Getters
 
 // * Default constructor
-Dog::Dog(){
-    this->type = "Dog";
-    std::cout << "Default constructor of Dog is called" << std::endl;
+Cat::Cat(): mind(new Brain()){
+    this->type = "Cat";
+
+    std::cout << "Default constructor of Cat is called" << std::endl;
 }
 
 // * Copy constructor with initializer list
-Dog::Dog(const Dog &other): Animal(other){
-    std::cout << "Copy constructor of Dog is called" << std::endl;
+Cat::Cat(const Cat &other): Animal(other), mind(other.mind){
+    std::cout << "Copy constructor of Cat is called" << std::endl;
 }
 
 // * Copy assignment operator
-Dog &Dog::operator=(const Dog &other){
+Cat &Cat::operator=(const Cat &other){
     type = other.type;
+
+    std::cout << "Copy assignment operator of Cat is called" << std::endl;
     
-    std::cout << "Copy assignment operator of Dog is called" << std::endl;
-        
     return *this;
 }
 
 // * Destructor
-Dog::~Dog(){
-    std::cout << "Dog" << " is destroyed" << std::endl;
+Cat::~Cat(){
+    delete this->mind;
+
+    std::cout << "Cat" << " is destroyed" << std::endl;
 }
 
 // * Setters & Getters
 
 // * Methods
-void Dog::makeSound() const {
-    std::cout << "Woof 🐶" << std::endl;
+void Cat::makeSound() const {
+    std::cout << "Meow 🐱" << std::endl;
 }

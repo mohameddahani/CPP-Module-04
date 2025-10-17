@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 19:06:21 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/16 16:02:53 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/17 09:49:17 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@ Cat::Cat(){
 
 // * Copy constructor with initializer list
 Cat::Cat(const Cat &other): Animal(other){
-    std::cout << "Copy constructor called" << std::endl;
+    std::cout << "Copy constructor of Cat is called" << std::endl;
 }
 
 // * Copy assignment operator
 Cat &Cat::operator=(const Cat &other){
     type = other.type;
 
-    std::cout << "Copy assignment operator called" << std::endl;
+    std::cout << "Copy assignment operator of Cat is called" << std::endl;
     
     return *this;
 }
