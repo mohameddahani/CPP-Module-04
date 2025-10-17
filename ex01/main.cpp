@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 16:10:08 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/17 21:48:57 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/17 21:52:03 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,33 +18,33 @@
 int main()
 {
     {
+        const Animal* j = new Dog();
+        const Animal* i = new Cat();
+        delete j;//should not create a leak
+        delete i;
+    }
+
+    std::cout << "===========================================" << std::endl;
+
+    {
         Animal *hayawan[4];
         for (int i = 0; i < 4; i++){
             if (i < 2){
                 hayawan[i] = new Dog();
             } else {
-                    hayawan[i] = new Cat();
+                hayawan[i] = new Cat();
             }
         }
 
         // * Make Sound
         for (int i = 0; i < 4; i++){
-                hayawan[i]->makeSound();
+            hayawan[i]->makeSound();
         }
         
         // * Free the array of animal
         for (int i = 0; i < 4; i++){
             delete hayawan[i];
         }
-    }
-
-    std::cout << "===========================================" << std::endl;
-    
-    {
-        const Animal* j = new Dog();
-        const Animal* i = new Cat();
-        delete j;//should not create a leak
-        delete i;
     }
 
     std::cout << "===========================================" << std::endl;
