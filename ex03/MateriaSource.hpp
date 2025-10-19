@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:52:10 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/19 09:50:27 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/19 16:24:35 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 // * Includes
 #include <iostream>
 #include "IMateriaSource.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
 
 // * Class With Orthodox Canonical Form
 class MateriaSource: public IMateriaSource {

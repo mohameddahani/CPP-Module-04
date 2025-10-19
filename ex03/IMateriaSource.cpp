@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:59:57 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/18 18:50:33 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/19 13:28:21 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,15 @@ IMateriaSource::IMateriaSource(){
 
 // * Copy constructor with initializer list
 IMateriaSource::IMateriaSource(const IMateriaSource &other){
+    (void)other;
+
     std::cout << "Copy constructor of IMateriaSource is called" << std::endl;
 }
 
 // * Copy assignment operator
 IMateriaSource &IMateriaSource::operator=(const IMateriaSource &other){
+    (void)other;
+
     std::cout << "Copy assignment operator of IMateriaSource is called" << std::endl;
     
     return *this;

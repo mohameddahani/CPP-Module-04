@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:59:57 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/19 10:08:38 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/19 15:44:22 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 // ! Definitions of Orthodox Canonical Form, Member functions, and Setters, Getters
 
 // * Default constructor
-Character::Character(){
+Character::Character(): name("Unknown name"){
     std::cout << "Default constructor of Character is called" << std::endl;
 }
 
@@ -27,15 +27,26 @@ Character::Character(std::string name): name(name){
 
 // * Copy constructor with initializer list
 Character::Character(const Character &other): name(other.name){
-    // todo deep copy
+    // ! deep copy
+    for (int i = 0; i < 4; i++){
+        if (other.inventory[i]){
+            this->inventory[i] = other.inventory[i]->clone();
+        }
+    }
 
     std::cout << "Copy constructor of Character is called" << std::endl;
 }
 
 // * Copy assignment operator
 Character &Character::operator=(const Character &other){
-    // todo deep copy
-
+    // ! deep copy
+    for (int i = 0; i < 4; i++){
+        if (other.inventory[i]){
+            // ? what is clone well be called ? (cure or ice)
+            this->inventory[i] = other.inventory[i]->clone();
+        }
+    }
+    
     this->name = other.name;
 
     std::cout << "Copy assignment operator of Character is called" << std::endl;
@@ -55,8 +66,12 @@ std::string const &Character::getName() const {
 
 // * Methods
 void Character::equip(AMateria *m){
+    if(!m){
+        return;
+    }
+    
     for (int i = 0; i < 4; i++){
-        if (this->inventory[i] == 0){
+        if (!this->inventory[i]){
             this->inventory[i] = m;
             break;
         }
@@ -64,12 +79,16 @@ void Character::equip(AMateria *m){
 }
 
 void Character::unequip(int idx){
-    // todo :
-    // delete this->inventory[idx];
+    if (idx < 0 || idx >= 4){
+        return;
+    }
     this->inventory[idx] = 0;
 }
 
 void Character::use(int idx, ICharacter &target){
-    // todo: ....
-//    AMateria::use(target);
+    if (idx < 0 || idx >= 4 || !this->inventory){
+        return;
+    }
+
+    this->inventory[idx]->use(target);
 }

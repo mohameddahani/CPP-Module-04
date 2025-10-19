@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:59:57 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/18 17:12:22 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/19 11:18:55 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,18 @@
 // * Default constructor
 ICharacter::ICharacter(){
     std::cout << "Default constructor of ICharacter is called" << std::endl;
-}
-
-// // * Parametrised constructor
-// ICharacter::ICharacter(std::string const & type): type(type){
-//     std::cout << "Parametrised constructor of ICharacter is called" << std::endl;
-    
-// }    
+}  
 
 // * Copy constructor with initializer list
 ICharacter::ICharacter(const ICharacter &other){
+    (void)other;
+
     std::cout << "Copy constructor of ICharacter is called" << std::endl;
 }
 
 // * Copy assignment operator
 ICharacter &ICharacter::operator=(const ICharacter &other){
-    // type = other.type;
+    (void)other;
 
     std::cout << "Copy assignment operator of ICharacter is called" << std::endl;
     
@@ -45,11 +41,5 @@ ICharacter::~ICharacter(){
 }
 
 // * Setters & Getters
-// std::string const &ICharacter::getType() const {
-//     return this->type;
-// }
 
 // * Methods
-// void ICharacter::use(ICharacter &target){
-//     std::cout << "* shoots an ice bolt at " << target << " *" << std::endl;
-// }
