@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:52:10 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/18 17:28:15 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/18 17:35:50 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ class Cure: public AMateria {
 
         // * Methods
         AMateria *clone() const;
+        void use(ICharacter& target);
 };
 
 #endif

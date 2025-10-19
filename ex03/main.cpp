@@ -6,11 +6,16 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:50:33 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/18 17:30:34 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/19 09:43:00 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include ""
+#include "ICharacter.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
+#include "Character.hpp"
+#include "IMateriaSource.hpp"
+#include "MateriaSource.hpp"
 
 int main()
 {

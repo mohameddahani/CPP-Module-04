@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:59:57 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/18 17:28:49 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/18 17:37:16 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,8 @@ Cure::~Cure(){
 // * Methods
 AMateria *Cure::clone() const {
     return new Cure();
+}
+
+void Cure::use(ICharacter &target){
+    std::cout << "* heals " << target << " wounds *" << std::endl;
 }

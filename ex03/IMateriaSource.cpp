@@ -1,56 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.cpp                                            :+:      :+:    :+:   */
+/*   IMateriaSource.cpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:59:57 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/18 17:35:10 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/18 18:50:33 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Ice.hpp"
+#include "IMateriaSource.hpp"
 
 // ! Definitions of Orthodox Canonical Form, Member functions, and Setters, Getters
 
 // * Default constructor
-Ice::Ice(){
-    this->type = "ice";
-
-    std::cout << "Default constructor of Ice is called" << std::endl;
-}   
+IMateriaSource::IMateriaSource(){
+    std::cout << "Default constructor of IMateriaSource is called" << std::endl;
+}
 
 // * Copy constructor with initializer list
-Ice::Ice(const Ice &other){
-    this->type = other.type;
-    
-    std::cout << "Copy constructor of Ice is called" << std::endl;
+IMateriaSource::IMateriaSource(const IMateriaSource &other){
+    std::cout << "Copy constructor of IMateriaSource is called" << std::endl;
 }
 
 // * Copy assignment operator
-Ice &Ice::operator=(const Ice &other){
-    this->type = other.type;
-    
-    std::cout << "Copy assignment operator of Ice is called" << std::endl;
+IMateriaSource &IMateriaSource::operator=(const IMateriaSource &other){
+    std::cout << "Copy assignment operator of IMateriaSource is called" << std::endl;
     
     return *this;
 }
 
 // * Destructor
-Ice::~Ice(){
-    // todo: free the clone Ice
-    
-    std::cout << "Ice" << " is destroyed" << std::endl;
+IMateriaSource::~IMateriaSource(){
+    std::cout << "IMateriaSource" << " is destroyed" << std::endl;
 }
 
 // * Setters & Getters
 
 // * Methods
-AMateria *Ice::clone() const {
-    return new Ice();
-}
-
-void Ice::use(ICharacter &target){
-    std::cout << "* shoots an ice bolt at " << target << " *" << std::endl;
-}

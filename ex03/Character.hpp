@@ -1,51 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:52:10 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/18 17:32:32 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/18 18:45:26 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_HPP
-# define ICE_HPP
+#ifndef CHARACTER_HPP
+# define CHARACTER_HPP
 
 // * Includes
 #include <iostream>
+#include "ICharacter.hpp"
 #include "AMateria.hpp"
 
 // * Class With Orthodox Canonical Form
-class Ice: public AMateria {
-    // // ! protected
-    // protected:
-    //     std::string type;
-
+class Character: public ICharacter {
+    // ! private
+    private:
+        std::string name;
+        AMateria *inventory[4] = {0};
     // ! public
     public:
         // * Default constructor
-        Ice();
+        Character();
 
-        // // * Parametrised constructor
-        // Ice(std::string const & type);
+        // * Parametrised constructor
+        Character(std::string name);
 
         // * Copy constructor
-        Ice(const Ice &other);
+        Character(const Character &other);
 
         // * Copy assignment operator
-        Ice &operator=(const Ice &other);
+        Character &operator=(const Character &other);
 
         // * Destructor
-        ~Ice();
+        virtual ~Character(){}
 
         // * Setters & Getters
-        // std::string const &getType() const;
+        std::string const & getName() const;
 
         // * Methods
-        AMateria *clone() const;
-        void use(ICharacter& target);
+        void equip(AMateria* m);
+        void unequip(int idx);
+        void use(int idx, ICharacter& target);
 };
 
 #endif

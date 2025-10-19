@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:52:10 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/18 14:39:44 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/18 18:09:41 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ class ICharacter {
         virtual ~ICharacter(){}
 
         // * Setters & Getters
+        virtual std::string const & getName() const = 0;
 
         // * Methods
-        virtual std::string const & getName() const = 0;
         virtual void equip(AMateria* m) = 0;
         virtual void unequip(int idx) = 0;
         virtual void use(int idx, ICharacter& target) = 0;

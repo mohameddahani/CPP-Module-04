@@ -1,51 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:52:10 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/18 17:32:32 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/19 09:50:27 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_HPP
-# define ICE_HPP
+#ifndef MATERIASOURCE_HPP
+# define MATERIASOURCE_HPP
 
 // * Includes
 #include <iostream>
-#include "AMateria.hpp"
+#include "IMateriaSource.hpp"
 
 // * Class With Orthodox Canonical Form
-class Ice: public AMateria {
-    // // ! protected
-    // protected:
-    //     std::string type;
-
+class MateriaSource: public IMateriaSource {
     // ! public
     public:
         // * Default constructor
-        Ice();
-
-        // // * Parametrised constructor
-        // Ice(std::string const & type);
+        MateriaSource();
 
         // * Copy constructor
-        Ice(const Ice &other);
+        MateriaSource(const MateriaSource &other);
 
         // * Copy assignment operator
-        Ice &operator=(const Ice &other);
+        MateriaSource &operator=(const MateriaSource &other);
 
         // * Destructor
-        ~Ice();
+        ~MateriaSource(){}
 
         // * Setters & Getters
-        // std::string const &getType() const;
 
         // * Methods
-        AMateria *clone() const;
-        void use(ICharacter& target);
+        void learnMateria(AMateria*);
+        AMateria* createMateria(std::string const & type);
 };
 
 #endif

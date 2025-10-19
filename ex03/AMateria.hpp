@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:52:10 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/18 13:12:40 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/19 09:41:09 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 // * Includes
 #include <iostream>
+#include "ICharacter.hpp"
 
 // * Class With Orthodox Canonical Form
 class AMateria {
