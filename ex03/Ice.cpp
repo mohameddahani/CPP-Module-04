@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:59:57 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/18 17:35:10 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/19 11:10:47 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,6 @@ Ice &Ice::operator=(const Ice &other){
 
 // * Destructor
 Ice::~Ice(){
-    // todo: free the clone Ice
-    
     std::cout << "Ice" << " is destroyed" << std::endl;
 }
 
@@ -52,5 +50,5 @@ AMateria *Ice::clone() const {
 }
 
 void Ice::use(ICharacter &target){
-    std::cout << "* shoots an ice bolt at " << target << " *" << std::endl;
+    std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }

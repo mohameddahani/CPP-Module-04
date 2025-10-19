@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:59:57 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/19 09:59:52 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/19 11:04:23 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,16 @@ AMateria::AMateria(std::string const & type): type(type){
 
 // * Copy constructor with initializer list
 // ! copying the type doesn’t make sense.
-// AMateria::AMateria(const AMateria &other): type(other.type){
+// ! because unlogic to assign ice to cure or cure to ice
 AMateria::AMateria(const AMateria &other){
+    (void)other;
+
     std::cout << "Copy constructor of AMateria is called" << std::endl;
 }
 
 // * Copy assignment operator
 AMateria &AMateria::operator=(const AMateria &other){
-    // ! copying the type doesn’t make sense.
-    // type = other.type;
+    (void)other;
 
     std::cout << "Copy assignment operator of AMateria is called" << std::endl;
     
@@ -56,6 +57,5 @@ std::string const &AMateria::getType() const {
 
 // * Methods
 void AMateria::use(ICharacter &target){
-    // todo define this func pls
-    std::cout << "* Random action to " << target.getName() << " * 🃏" << std::endl;
+    std::cout << "* uses materia on " << target.getName() << " * 🃏" << std::endl;
 }
