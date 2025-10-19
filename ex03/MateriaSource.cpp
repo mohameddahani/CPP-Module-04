@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:59:57 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/19 16:23:55 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/19 21:02:18 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,24 @@ MateriaSource::MateriaSource(){
 
 // * Copy constructor with initializer list
 MateriaSource::MateriaSource(const MateriaSource &other){
-    // todo deep copy
+    // ! deep copy
+    for (int i = 0; i < 4; i++){
+        if (other.inventorySource[i]){
+            this->inventorySource[i] = other.inventorySource[i]->clone();
+        }
+    }
 
     std::cout << "Copy constructor of MateriaSource is called" << std::endl;
 }
 
 // * Copy assignment operator
 MateriaSource &MateriaSource::operator=(const MateriaSource &other){
-    // todo deep copy
-
-    // this->name = other.name;
+    // ! deep copy
+    for (int i = 0; i < 4; i++){
+        if (other.inventorySource[i]){
+            this->inventorySource[i] = other.inventorySource[i]->clone();
+        }
+    }
 
     std::cout << "Copy assignment operator of MateriaSource is called" << std::endl;
     
@@ -50,7 +58,6 @@ void MateriaSource::learnMateria(AMateria *m){
     if (!m){
         return;
     }
-    m->clone();
 }
 
 AMateria *MateriaSource::createMateria(std::string const &type){
