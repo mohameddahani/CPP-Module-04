@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:59:57 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/18 18:43:07 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/19 10:08:38 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,9 +64,12 @@ void Character::equip(AMateria *m){
 }
 
 void Character::unequip(int idx){
+    // todo :
+    // delete this->inventory[idx];
     this->inventory[idx] = 0;
 }
 
 void Character::use(int idx, ICharacter &target){
-    std::
+    // todo: ....
+//    AMateria::use(target);
 }
