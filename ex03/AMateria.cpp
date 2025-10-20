@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:59:57 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/20 09:50:12 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/20 12:01:27 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@
 // ! Definitions of Orthodox Canonical Form, Member functions, and Setters, Getters
 
 // * Default constructor
-AMateria::AMateria(){
-    this->type = "Unknown";
-
+AMateria::AMateria(): type("Unknown"){
     std::cout << "Default constructor of AMateria is called" << std::endl;
 }
 
@@ -38,6 +36,8 @@ AMateria::AMateria(const AMateria &other){
 }
 
 // * Copy assignment operator
+// ! copying the type doesn’t make sense.
+// ! because unlogic to assign ice to cure or cure to ice
 AMateria &AMateria::operator=(const AMateria &other){
     (void)other;
 
