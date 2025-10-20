@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:50:33 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/20 16:29:13 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/20 21:02:46 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,10 @@ int main()
         
         // * attack
         bruno->use(0, *enemy);
+        // * heal
         bruno->use(1, *enemy);
+        // * remove cure from inventory
+        bruno->unequip(1);
 
         // * delete all allocation memory
         delete enemy;

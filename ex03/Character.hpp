@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:52:10 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/20 09:59:42 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/20 20:19:43 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,23 @@
 #include "ICharacter.hpp"
 #include "AMateria.hpp"
 
+// * Struct (Linked list)
+typedef struct s_unequipMateria
+{
+    AMateria *content;
+    struct s_unequipMateria *next;
+
+} t_unequipMateria;
+
+
 // * Class With Orthodox Canonical Form
 class Character: public ICharacter {
     // ! private
     private:
         std::string name;
         AMateria *inventory[4];
+        t_unequipMateria *unequippedMateriaList;
+
     // ! public
     public:
         // * Default constructor

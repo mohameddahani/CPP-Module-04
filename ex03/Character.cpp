@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:59:57 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/20 16:07:22 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/20 20:58:56 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,15 @@ Character::~Character(){
             delete this->inventory[i];
         }
     }
+
+    // ! free the unequip materia
+    t_unequipMateria *tmp;
+    while (this->unequippedMateriaList){
+        tmp = this->unequippedMateriaList->next;
+        delete this->unequippedMateriaList->content;
+        delete this->unequippedMateriaList;
+        this->unequippedMateriaList = tmp;
+    }
     
     std::cout << "Character" << " is destroyed" << std::endl;
 }
@@ -96,7 +105,27 @@ void Character::unequip(int idx){
     if (idx < 0 || idx >= 4){
         return;
     }
+
+    // * Create new node
+    t_unequipMateria *newNode = new t_unequipMateria;
+    newNode->content = this->inventory[idx];
+    newNode->next = NULL;
+    
+    // * clear Materia
     this->inventory[idx] = 0;
+
+    // * check if the node is empty
+    if (!this->unequippedMateriaList) {
+        this->unequippedMateriaList = newNode;
+        return;
+    }
+    
+    // * add the materia on the last node
+    t_unequipMateria *tmp = this->unequippedMateriaList;
+    while (tmp->next)
+        tmp = tmp->next;
+
+    tmp->next = newNode;
 }
 
 void Character::use(int idx, ICharacter &target){
