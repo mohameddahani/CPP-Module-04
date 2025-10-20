@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:59:57 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/20 12:50:03 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/20 16:07:22 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,13 @@ Character &Character::operator=(const Character &other){
 
 // * Destructor
 Character::~Character(){
+    // ! free all alloaction memory
+    for (int i = 0; i < 4; i++){
+        if (this->inventory[i]){
+            delete this->inventory[i];
+        }
+    }
+    
     std::cout << "Character" << " is destroyed" << std::endl;
 }
 
