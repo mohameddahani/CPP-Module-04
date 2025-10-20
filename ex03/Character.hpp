@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:52:10 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/19 10:10:44 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/20 09:59:42 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Character: public ICharacter {
     // ! private
     private:
         std::string name;
-        AMateria *inventory[4] = {0};
+        AMateria *inventory[4];
     // ! public
     public:
         // * Default constructor
@@ -39,7 +39,7 @@ class Character: public ICharacter {
         Character &operator=(const Character &other);
 
         // * Destructor
-        ~Character(){}
+        ~Character();
 
         // * Setters & Getters
         std::string const & getName() const;

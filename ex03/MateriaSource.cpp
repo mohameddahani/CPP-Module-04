@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:59:57 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/19 21:02:18 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/20 10:04:57 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@
 
 // * Default constructor
 MateriaSource::MateriaSource(){
+    for (int i = 0; i < 4; i++){
+        this->inventorySource[i] = 0;
+    }
+
     std::cout << "Default constructor of MateriaSource is called" << std::endl;
 }  
 
@@ -58,13 +62,23 @@ void MateriaSource::learnMateria(AMateria *m){
     if (!m){
         return;
     }
+
+    for (int i = 0; i < 4; i++)
+    {
+        if (!this->inventorySource[i]){
+            this->inventorySource[i] = m->clone();
+            break;
+        }
+        
+    }
 }
 
 AMateria *MateriaSource::createMateria(std::string const &type){
-    if (type == "ice"){
-        return new Ice();
-    } else if (type == "cure"){
-        return new Cure();
+    for (int i = 0; i < 4; i++){
+        if (this->inventorySource[i]->getType() == type)
+        {
+            return this->inventorySource[i]->clone();
+        }
     }
-    return NULL;
+    return 0;
 }

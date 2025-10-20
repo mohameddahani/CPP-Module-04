@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:59:57 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/19 15:44:22 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/20 10:03:09 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,19 @@
 
 // * Default constructor
 Character::Character(): name("Unknown name"){
+    for (int i = 0; i < 4; i++){
+        this->inventory[i] = 0;
+    }
+    
     std::cout << "Default constructor of Character is called" << std::endl;
 }
 
 // * Parametrised constructor
 Character::Character(std::string name): name(name){
+    for (int i = 0; i < 4; i++){
+        this->inventory[i] = 0;
+    }
+    
     std::cout << "Parametrised constructor of Character is called" << std::endl;
     
 }    
@@ -86,7 +94,7 @@ void Character::unequip(int idx){
 }
 
 void Character::use(int idx, ICharacter &target){
-    if (idx < 0 || idx >= 4 || !this->inventory){
+    if (idx < 0 || idx >= 4 || !this->inventory[idx]){
         return;
     }
 

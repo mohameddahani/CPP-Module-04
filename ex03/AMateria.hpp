@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:52:10 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/19 09:41:09 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/20 09:50:41 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 
 // * Includes
 #include <iostream>
-#include "ICharacter.hpp"
+
+// * forward declaration
+class ICharacter;
 
 // * Class With Orthodox Canonical Form
 class AMateria {

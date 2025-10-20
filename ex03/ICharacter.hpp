@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:52:10 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/19 15:44:25 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/20 09:59:02 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class ICharacter {
         ICharacter &operator=(const ICharacter &other);
 
         // * Destructor
-        virtual ~ICharacter(){}
+        virtual ~ICharacter();
 
         // * Setters & Getters
         virtual std::string const & getName() const = 0;

@@ -6,11 +6,12 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:59:57 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/19 11:10:47 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/20 09:57:06 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
+#include "ICharacter.hpp"
 
 // ! Definitions of Orthodox Canonical Form, Member functions, and Setters, Getters
 

@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:52:10 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/19 09:38:46 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/20 10:03:31 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class IMateriaSource {
         IMateriaSource &operator=(const IMateriaSource &other);
 
         // * Destructor
-        virtual ~IMateriaSource(){}
+        virtual ~IMateriaSource();
 
         // * Setters & Getters
 

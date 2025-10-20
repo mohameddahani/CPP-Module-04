@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:52:10 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/19 20:26:39 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/20 10:03:52 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 class MateriaSource: public IMateriaSource {
     // ! private
     private:
-        AMateria *inventorySource[4] = {0};
+        AMateria *inventorySource[4];
     // ! public
     public:
         // * Default constructor
@@ -36,7 +36,7 @@ class MateriaSource: public IMateriaSource {
         MateriaSource &operator=(const MateriaSource &other);
 
         // * Destructor
-        ~MateriaSource(){}
+        ~MateriaSource();
 
         // * Setters & Getters
 
