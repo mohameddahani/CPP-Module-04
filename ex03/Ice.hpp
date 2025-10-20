@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:52:10 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/19 11:10:25 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/20 10:09:58 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 // * Includes
 #include <iostream>
 #include "AMateria.hpp"
+#include "ICharacter.hpp"
+
 
 // * Class With Orthodox Canonical Form
 class Ice: public AMateria {
