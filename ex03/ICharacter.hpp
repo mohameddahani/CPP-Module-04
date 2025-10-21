@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:52:10 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/20 09:59:02 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/21 21:07:44 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,12 @@
 #include <iostream>
 #include "AMateria.hpp"
 
-// * Class With Orthodox Canonical Form
+// * Class (Interface)
 class ICharacter {
     // ! public
     public:
-        // * Default constructor
-        ICharacter();
-
-        // * Copy constructor
-        ICharacter(const ICharacter &other);
-
-        // * Copy assignment operator
-        ICharacter &operator=(const ICharacter &other);
-
         // * Destructor
-        virtual ~ICharacter();
+        virtual ~ICharacter(){}
 
         // * Setters & Getters
         virtual std::string const & getName() const = 0;

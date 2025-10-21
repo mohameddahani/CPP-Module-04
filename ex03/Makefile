@@ -1,6 +1,6 @@
 NAME = Game
 
-SRCS =  main.cpp AMateria.cpp Cure.cpp Ice.cpp ICharacter.cpp Character.cpp IMateriaSource.cpp MateriaSource.cpp
+SRCS =  main.cpp AMateria.cpp Cure.cpp Ice.cpp Character.cpp MateriaSource.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
