@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 16:10:08 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/16 18:00:23 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/21 17:15:27 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int main(){
     // * Wrong Animal, Wrong Cat
     std::cout << "==============================================" << std::endl;
     
-    const WrongAnimal* hayawan = new WrongAnimal();;
+    const WrongAnimal* hayawan = new WrongAnimal();
     const WrongAnimal* yellowCat = new WrongCat();
     std::cout << yellowCat->getType() << " " << std::endl;
     yellowCat->makeSound();
