@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:52:10 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/20 10:03:52 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/21 21:33:23 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,6 @@ class MateriaSource: public IMateriaSource {
 
         // * Destructor
         ~MateriaSource();
-
-        // * Setters & Getters
 
         // * Methods
         void learnMateria(AMateria*);

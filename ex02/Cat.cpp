@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 19:06:21 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/21 18:25:41 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/21 21:31:38 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,6 @@ Cat::~Cat(){
 
     std::cout << "Cat" << " is destroyed" << std::endl;
 }
-
-// * Setters & Getters
 
 // * Methods
 void Cat::makeSound() const {

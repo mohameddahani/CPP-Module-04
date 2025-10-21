@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:52:10 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/20 09:55:37 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/21 21:32:42 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,6 @@ class Cure: public AMateria {
 
         // * Destructor
         ~Cure();
-
-        // * Setters & Getters
 
         // * Methods
         AMateria *clone() const;

@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 19:06:49 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/17 09:49:41 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/21 21:29:55 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,6 @@ Dog &Dog::operator=(const Dog &other){
 Dog::~Dog(){
     std::cout << "Dog" << " is destroyed" << std::endl;
 }
-
-// * Setters & Getters
 
 // * Methods
 void Dog::makeSound() const {

@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:59:57 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/20 12:04:10 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/21 21:32:38 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,6 @@ Cure &Cure::operator=(const Cure &other){
 Cure::~Cure(){
     std::cout << "Cure" << " is destroyed" << std::endl;
 }
-
-// * Setters & Getters
 
 // * Methods
 AMateria *Cure::clone() const {

@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 19:06:21 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/17 09:50:50 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/21 21:31:16 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,6 @@ WrongCat &WrongCat::operator=(const WrongCat &other){
 WrongCat::~WrongCat(){
     std::cout << "WrongCat" << " is destroyed" << std::endl;
 }
-
-// * Setters & Getters
 
 // * Methods
 void WrongCat::makeSound() const {

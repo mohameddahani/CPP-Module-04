@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:59:57 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/21 10:01:38 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/21 21:33:13 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,10 +60,7 @@ MateriaSource::~MateriaSource(){
     std::cout << "MateriaSource" << " is destroyed" << std::endl;
 }
 
-// * Setters & Getters
-
 // * Methods
-
 void MateriaSource::learnMateria(AMateria *m){
     if (!m){
         return;

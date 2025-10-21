@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 19:06:26 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/16 17:17:54 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/21 21:30:23 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,6 @@ class WrongCat: public WrongAnimal {
 
         // * Destructor
         ~WrongCat();
-
-        // * Setters & Getters
 
         // * Methods
         void makeSound() const;

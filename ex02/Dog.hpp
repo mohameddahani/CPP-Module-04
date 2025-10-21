@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 19:06:37 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/17 10:25:44 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/21 21:31:55 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,6 @@ class Dog: public Animal {
 
         // * Destructor
         ~Dog();
-
-        // * Setters & Getters
 
         // * Methods
         void makeSound() const;

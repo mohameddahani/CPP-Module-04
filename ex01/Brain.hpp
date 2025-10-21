@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 09:26:45 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/17 10:31:16 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/21 21:30:44 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,6 @@ class Brain {
 
         // * Destructor
         virtual ~Brain();
-
-        // * Setters & Getters
-
-        // * Methods
 
 };
 

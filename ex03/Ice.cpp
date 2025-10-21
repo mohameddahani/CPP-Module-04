@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:59:57 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/20 10:09:49 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/21 21:32:46 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,6 @@ Ice &Ice::operator=(const Ice &other){
 Ice::~Ice(){
     std::cout << "Ice" << " is destroyed" << std::endl;
 }
-
-// * Setters & Getters
 
 // * Methods
 AMateria *Ice::clone() const {

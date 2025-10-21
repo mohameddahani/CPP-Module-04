@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 09:41:30 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/17 10:31:26 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/21 21:30:41 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,3 @@ Brain &Brain::operator=(const Brain &other){
 Brain::~Brain(){
     std::cout << "Brain" << " is destroyed" << std::endl;
 }
-
-// * Setters & Getters
-
-
-// * Methods

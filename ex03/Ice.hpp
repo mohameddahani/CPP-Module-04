@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:52:10 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/20 10:09:58 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/21 21:32:52 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,6 @@ class Ice: public AMateria {
 
         // * Destructor
         ~Ice();
-
-        // * Setters & Getters
 
         // * Methods
         AMateria *clone() const;
