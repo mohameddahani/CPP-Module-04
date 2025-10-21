@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 19:06:21 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/17 20:46:38 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/21 18:25:41 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,9 @@ Cat::Cat(const Cat &other): Animal(other), mind(new Brain(*other.mind)){
 // * Copy assignment operator
 Cat &Cat::operator=(const Cat &other){
     type = other.type;
+
+    // ! deep copy
+    *this->mind = *other.mind;
 
     std::cout << "Copy assignment operator of Cat is called" << std::endl;
     
