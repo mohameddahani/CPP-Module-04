@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 19:06:49 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/17 20:46:18 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/21 14:23:47 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ Dog::Dog(const Dog &other): Animal(other), mind(new Brain(*other.mind)){
 // * Copy assignment operator
 Dog &Dog::operator=(const Dog &other){
     type = other.type;
+
+    // ! deep copy
+    *this->mind = *other.mind;
     
     std::cout << "Copy assignment operator of Dog is called" << std::endl;
         

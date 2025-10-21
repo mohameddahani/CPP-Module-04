@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 16:10:08 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/17 21:52:03 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/21 16:06:10 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,46 +24,46 @@ int main()
         delete i;
     }
 
-    std::cout << "===========================================" << std::endl;
+    // std::cout << "===========================================" << std::endl;
 
-    {
-        Animal *hayawan[4];
-        for (int i = 0; i < 4; i++){
-            if (i < 2){
-                hayawan[i] = new Dog();
-            } else {
-                hayawan[i] = new Cat();
-            }
-        }
+    // {
+    //     Animal *hayawan[4];
+    //     for (int i = 0; i < 4; i++){
+    //         if (i < 2){
+    //             hayawan[i] = new Dog();
+    //         } else {
+    //             hayawan[i] = new Cat();
+    //         }
+    //     }
 
-        // * Make Sound
-        for (int i = 0; i < 4; i++){
-            hayawan[i]->makeSound();
-        }
+    //     // * Make Sound
+    //     for (int i = 0; i < 4; i++){
+    //         hayawan[i]->makeSound();
+    //     }
         
-        // * Free the array of animal
-        for (int i = 0; i < 4; i++){
-            delete hayawan[i];
-        }
-    }
+    //     // * Free the array of animal
+    //     for (int i = 0; i < 4; i++){
+    //         delete hayawan[i];
+    //     }
+    // }
 
-    std::cout << "===========================================" << std::endl;
+    // std::cout << "===========================================" << std::endl;
 
-    {
-        // * Without pointer (Object Slicing)
-        Animal monster[2];
-        for (int i = 0; i < 2; i++){
-            if (i < 1){
-                monster[i] = Dog();
-            }
-            monster[i] = Cat();
-        }
+    // {
+    //     // * Without pointer (Object Slicing)
+    //     Animal monster[2];
+    //     for (int i = 0; i < 2; i++){
+    //         if (i < 1){
+    //             monster[i] = Dog();
+    //         }
+    //         monster[i] = Cat();
+    //     }
 
-        // * Make Sound
-        for (int i = 0; i < 2; i++){
-            monster[i].makeSound();
-        }
-    }
+    //     // * Make Sound
+    //     for (int i = 0; i < 2; i++){
+    //         monster[i].makeSound();
+    //     }
+    // }
     
     return 0;
 }
