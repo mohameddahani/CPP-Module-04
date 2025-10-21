@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:59:57 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/20 16:07:18 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/21 10:01:38 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void MateriaSource::learnMateria(AMateria *m){
     for (int i = 0; i < 4; i++)
     {
         if (!this->inventorySource[i]){
-            this->inventorySource[i] = m->clone();
+            this->inventorySource[i] = m;
             break;
         }
         

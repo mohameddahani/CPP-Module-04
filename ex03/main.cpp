@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:50:33 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/20 21:02:46 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/21 10:23:50 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,64 +19,60 @@
 
 int main()
 {
-    // {
-    //     IMateriaSource* src = new MateriaSource();
-    //     src->learnMateria(new Ice());
-    //     src->learnMateria(new Cure());
-    //     ICharacter* me = new Character("me");
-    //     AMateria* tmp;
-    //     tmp = src->createMateria("ice");
-    //     me->equip(tmp);
-    //     tmp = src->createMateria("cure");
-    //     me->equip(tmp);
-    //     ICharacter* bob = new Character("bob");
-    //     me->use(0, *bob);
-    //     me->use(1, *bob);
-        
-    //     delete bob;
-    //     delete me;
-    //     delete src;
-    // }
-
-
     {
-        // * Create a Character
-        ICharacter *bruno = new Character("Bruno");
-       
-        // * Learn and create Some Materia and equip it
-        AMateria *tmp;
-        IMateriaSource *src = new MateriaSource();
-
-        // * learn
-        Ice *newIce = new Ice();
-        src->learnMateria(newIce);
-        // * create
+        IMateriaSource* src = new MateriaSource();
+        src->learnMateria(new Ice());
+        src->learnMateria(new Cure());
+        ICharacter* me = new Character("me");
+        AMateria* tmp;
         tmp = src->createMateria("ice");
-        // * equip it
-        bruno->equip(tmp);
-
-        Cure *newCure = new Cure();
-        src->learnMateria(newCure);
+        me->equip(tmp);
         tmp = src->createMateria("cure");
-        bruno->equip(tmp);
-
-        // * careate another character to use on him the materia
-        ICharacter *enemy = new Character("enemy");
+        me->equip(tmp);
+        ICharacter* bob = new Character("bob");
+        me->use(0, *bob);
+        me->use(1, *bob);
         
-        // * attack
-        bruno->use(0, *enemy);
-        // * heal
-        bruno->use(1, *enemy);
-        // * remove cure from inventory
-        bruno->unequip(1);
-
-        // * delete all allocation memory
-        delete enemy;
+        delete bob;
+        delete me;
         delete src;
-        delete bruno;
-        delete newCure;
-        delete newIce;
     }
+
+
+    // {
+    //     // * Create a Character
+    //     ICharacter *bruno = new Character("Bruno");
+       
+    //     // * Learn and create Some Materia and equip it
+    //     AMateria *tmp;
+    //     IMateriaSource *src = new MateriaSource();
+
+    //     // * learn
+    //     src->learnMateria(new Ice());
+    //     // * create
+    //     tmp = src->createMateria("ice");
+    //     // * equip it
+    //     bruno->equip(tmp);
+
+    //     src->learnMateria(new Cure());
+    //     tmp = src->createMateria("cure");
+    //     bruno->equip(tmp);
+
+    //     // * careate another character to use on him the materia
+    //     ICharacter *enemy = new Character("enemy");
+        
+    //     // * attack
+    //     bruno->use(0, *enemy);
+    //     // * heal
+    //     bruno->use(1, *enemy);
+    //     // * remove cure from inventory
+    //     bruno->unequip(1);
+
+    //     // * delete all allocation memory
+    //     delete enemy;
+    //     delete src;
+    //     delete bruno;
+    // }
 
     
     // {
@@ -88,15 +84,13 @@ int main()
     //     MateriaSource src;
 
     //     // * learn
-    //     AMateria *newIce = new Ice();
-    //     src.learnMateria(newIce);
+    //     src.learnMateria(new Ice());
     //     // * create
     //     tmp = src.createMateria("ice");
     //     // * equip it
     //     bruno.equip(tmp);
-        
-    //     AMateria *newCure = new Cure();
-    //     src.learnMateria(newCure);
+
+    //     src.learnMateria(new Cure());
     //     tmp = src.createMateria("cure");
     //     bruno.equip(tmp);
 
@@ -106,10 +100,6 @@ int main()
     //     // * attack
     //     bruno.use(0, enemy);
     //     bruno.use(1, enemy);
-
-    //     // * delete all allocation memory
-    //     delete newCure;
-    //     delete newIce;
     // }
 
     return 0;

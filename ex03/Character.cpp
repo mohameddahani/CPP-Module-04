@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:59:57 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/20 20:58:56 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/21 10:20:58 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 // ! Definitions of Orthodox Canonical Form, Member functions, and Setters, Getters
 
 // * Default constructor
-Character::Character(): name("Unknown name"){
+Character::Character(): name("Unknown name"), unequippedMateriaList(0){
     for (int i = 0; i < 4; i++){
         this->inventory[i] = 0;
     }
@@ -24,7 +24,7 @@ Character::Character(): name("Unknown name"){
 }
 
 // * Parametrised constructor
-Character::Character(std::string name): name(name){
+Character::Character(std::string name): name(name), unequippedMateriaList(0){
     for (int i = 0; i < 4; i++){
         this->inventory[i] = 0;
     }
