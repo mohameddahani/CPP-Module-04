@@ -6,7 +6,7 @@
 /*   By: mdahani <mdahani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:59:57 by mdahani           #+#    #+#             */
-/*   Updated: 2025/10/21 10:20:58 by mdahani          ###   ########.fr       */
+/*   Updated: 2025/10/28 13:49:34 by mdahani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,14 @@ void Character::equip(AMateria *m){
         return;
     }
 
+    // * check if the materia all ready equip
+    for (int i = 0; i < 4; i++){
+        if (this->inventory[i] == m){
+            return ;
+        }
+    }
+
+    // * equip the materia
     for (int i = 0; i < 4; i++){
         if (!this->inventory[i]){
             this->inventory[i] = m;
